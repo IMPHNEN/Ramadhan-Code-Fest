@@ -4,3 +4,9 @@
 [submodule "qurancord"]
 	path = qurancord
 	url = https://github.com/stackpan/qurancord.git
+[submodule "jadwal-sholat"]
+	path = jadwal-sholat
+	url = https://github.com/haikelz/jadwal-sholat
+[submodule "asmaul-husna-api"]
+	path = asmaul-husna-api
+	url = https://github.com/haikelz/asmaul-husna-api
