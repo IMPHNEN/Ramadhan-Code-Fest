@@ -13,3 +13,6 @@
 [submodule "cheat-puasa"]
 	path = cheat-puasa
 	url = https://github.com/putra4648/cheat-puasa
+[submodule "reminder-bot"]
+	path = reminder-bot
+	url = https://github.com/fdvky1/reminder-bot
