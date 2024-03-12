@@ -10,3 +10,6 @@
 [submodule "asmaul-husna-api"]
 	path = asmaul-husna-api
 	url = https://github.com/haikelz/asmaul-husna-api
+[submodule "cheat-puasa"]
+	path = cheat-puasa
+	url = https://github.com/putra4648/cheat-puasa
