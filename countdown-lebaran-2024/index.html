@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown Lebaran 2024</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="h-min-screen">
+    <h1 class="text-center p-2">Countdown Lebaran 2024</h1>
+    <div class="flex justify-center gap-20 flex-col md:flex-row px-2">
+      <div>
+        <p id="nahdlatulUlama" class="text-xl md:text-2xl font-semibold mb-2">0 hari 0 menit 0 detik</p>
+        <p class="text-lg md:text-xl text-gray-600">Nahdlatul Ulama</p>
+      </div>
+      <div>
+        <p id="muhammadiyah" class="text-xl md:text-2xl font-semibold mb-2">0 hari 0 menit 0 detik</p>
+        <p class="text-lg md:text-xl text-gray-600">Muhammadiyah</p>
+      </div>
+    </div>
+    <p class="text-xs text-center mt-10">Countdown ini hanya perkiraan!</p>
+
+    <script>
+      const nahdlatulUlamaDate = new Date("April 10, 2024 00:00:00 GMT+00:00");
+      const muhammadiyahDate = new Date("April 11, 2024 00:00:00 GMT+00:00");
+
+      function updateCountdown(elementId, targetDate) {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById(elementId).innerHTML = `${days} hari ${hours} jam ${minutes} menit ${seconds} detik`;
+      }
+
+      updateCountdown("nahdlatulUlama", nahdlatulUlamaDate);
+      updateCountdown("muhammadiyah", muhammadiyahDate);
+
+      setInterval(() => {
+        updateCountdown("nahdlatulUlama", nahdlatulUlamaDate);
+        updateCountdown("muhammadiyah", muhammadiyahDate);
+      }, 1000);
+    </script>
+  </body>
+</html>
