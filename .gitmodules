@@ -4,3 +4,6 @@
 [submodule "qurancord"]
 	path = qurancord
 	url = https://github.com/stackpan/qurancord.git
+[submodule "cheat-puasa"]
+	path = cheat-puasa
+	url = https://github.com/putra4648/cheat-puasa
