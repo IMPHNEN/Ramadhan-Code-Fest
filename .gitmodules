@@ -4,6 +4,12 @@
 [submodule "qurancord"]
 	path = qurancord
 	url = https://github.com/stackpan/qurancord.git
+[submodule "jadwal-sholat"]
+	path = jadwal-sholat
+	url = https://github.com/haikelz/jadwal-sholat
+[submodule "asmaul-husna-api"]
+	path = asmaul-husna-api
+	url = https://github.com/haikelz/asmaul-husna-api
 [submodule "cheat-puasa"]
 	path = cheat-puasa
 	url = https://github.com/putra4648/cheat-puasa
