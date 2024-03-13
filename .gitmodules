@@ -16,3 +16,6 @@
 [submodule "reminder-bot"]
 	path = reminder-bot
 	url = https://github.com/fdvky1/reminder-bot
+[submodule "Quran"]
+	path = Quran
+	url = https://github.com/lzif/Quran
