@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wheel of Name</title>
+<!-- 链接 Font Awesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="styles.css"> <!-- 连接外部 CSS 文件 -->
+</head>
+<body>
+<div class="container">
+	<h1>WHEEL OF NAMES</h1>
+    <h3>List Of Names</h3>
+    <div id="nameListContainer">
+        <ul id="nameList"></ul>
+    </div>
+    <button class="button" onclick="startSpin()">Spin Wheel</button>
+    <p id="spinning" class="spinning">Spinning wheel</p> <!-- 添加旋转信息 -->
+    <p id="winner"></p>
+    <h3>Input Names</h3>
+    <textarea id="nameInput" placeholder="Enter names..." rows="4"></textarea>
+    
+    <!-- Modal box -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Winner: <span id="modalWinner" class="modalWinner"></span></h3>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-icons">
+    <a href="https://www.facebook.com/xianyaoyu"><i class=" fab fa-facebook-square"></i></a>
+    <a href="https://github.com/XianyaoYu"><i class="fab fa-github-alt"></i></a>
+    <a href="https://xianyaoyu.github.io"><i class="fas fa-link"></i></a>
+  </div>
+  <p>&copy; 2024 贤垚于. All rights reserved.</p>
+</footer>
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="script.js"></script> <!-- 连接外部 JavaScript 文件 -->
+</body>
+</html>
