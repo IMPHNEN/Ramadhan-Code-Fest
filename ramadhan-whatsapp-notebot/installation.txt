@@ -1,0 +1,6 @@
+npm i
+npm start
+
+command =
+
+.a (jam:menit) (pesan)
