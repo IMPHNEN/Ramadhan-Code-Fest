@@ -2,26 +2,35 @@
 #SingleInstance Force
 #Warn
 
-MainGui := Gui(,"Pengingat Sederhana",)
-MainGui.SetFont("S12")
-MainGui.Add("Text",,"Pengingat Sederhana untuk Bang/Neng yang Giat Ngoding")
-Remindertime := MainGui.AddDateTime("vTimeForRemider", "Time")
-FormatTime(Remindertime.Value, "Time")
-MainGui.AddButton("Center", "Buat Pengingat").OnEvent('Click', SubmitClicked)
+MainGui := Gui(,"Pengingat Bagi Yang Giat Ngoding",)
+MainGui.SetFont("S16", "Calibri")
+MainGui.Add("Text",,"Pengingat apa ini Bang/Neng?")
+AlarmName := MainGui.AddEdit("r1 w300", "Buka Puasa")
+MainGui.Add("Text",,"Kapan mau diingatkan Bang/Neng?")
+Remindertime := MainGui.AddDateTime("vTimeForRemider w300", "Time")
+MainGui.AddButton("x110", "Buat Pengingat").OnEvent('Click', SubmitClicked)
 MainGui.Show("AutoSize")
 
 SubmitClicked(*)
 {
-    result := MsgBox("Pengingat diatur ke " FormatTime(Remindertime.Value, "Time") " Sekarang masih " FormatTime(A_Now,"Time"), "Siap Bang/Neng", "OK T3")
-        if (result = "OK" or "Timeout")
-                {
-                    If(DateAdd(A_Now, Remindertime.Value, "Minutes") <= 0) {
-                        Sleep 10000
-                    }
-                    Else {
-                        Traytip("Bang/Neng sudah waktunya bang!")
-                        Sleep 3000
-                        Traytip
-                    }
-                }
+    If(A_Now > Remindertime.Value) {
+	MsgBox "Salah tuh atur pengingatnya."
+	} else {
+	result := MsgBox("Pengingat diatur ke " FormatTime(Remindertime.Value, "HH:mm:ss") ", sekarang masih " FormatTime(A_Now,"HH:mm:ss"), "Siap Bang/Neng", "OK T3")
+	MainGui.Hide
+	if(result = "OK" or "Timeout"){
+	SetTimer TimeUp, 500
+		}
+	}
+}
+
+TimeUp()
+{
+	If(A_Now = Remindertime.Value){
+		SoundPlay "C:\Windows\Media\Alarm01.wav"
+		MsgBox "Udah waktunya " AlarmName.Value " Bang/Neng"
+		MainGui.Show("AutoSize")
+	} Else {
+	Exit
+	}
 }
