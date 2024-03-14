@@ -1,0 +1,341 @@
+body {
+    background-color: #ffffff;
+    font-family: Figtree, Inter, sans-serif;
+  }
+  
+  h1 {
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .box {
+    border: 2px solid #333;
+    padding: 2.5rem;
+    margin: 4rem auto;
+    max-width: 30rem;
+    box-shadow: 10px 10px 0 0 rgb(0, 0, 0);
+    top: 0;
+    transition: all 0.25s ease-out;
+    background-color: #96e4f8;
+  }
+  .box:hover {
+    box-shadow: 14px 14px 0 0 rgba(0, 0, 0, 0.25);
+    top: -4px;
+    background-color: #b5ffd4;
+  }
+  
+  label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    text-wrap: nowrap;
+  }
+  p label {
+    margin-bottom: 0.5em;
+  }
+  
+  .aside {
+    color: #ccc;
+    font-size: 0.8em;
+  }
+  
+  p.text-center {
+    text-align: center;
+  }
+  
+  .cols {
+    display: flex;
+    flex-direction: row;
+  }
+  .cols div {
+    min-width: 16em;
+  }
+  
+  button {
+    transition: all 0.3s ease;
+    padding: 1em 2em;
+    background: #0051ff;
+    font-size: 1em;
+    font-weight: 900;
+    border: 2px solid #000;
+    border-radius: 0.1em;
+    box-shadow: 0.25em 0.25em #000;
+    cursor: pointer;
+    color: white;
+  }
+  button:hover {
+    transform: translate(-0.1em, -0.1em);
+    box-shadow: 0.35em 0.35em;
+    background-color: #fff;
+    color: #000;
+    padding: 1em 2.25em;
+  }
+  button:active {
+    background-color:#0051ff;
+    color: white;
+    transform: translate(0.15em, 0.15em);
+    box-shadow: 0.25em 0.25em;
+  }
+  button.alt {
+    background-color: #000;
+    box-shadow: none;
+  }
+  button.alt:hover {
+    box-shadow: 0.35em 0.35em;
+    background-color: #fff;
+  }
+  button.alt:active {
+    color: #0077ff;
+    box-shadow: none;
+  }
+  
+  input[type=text],
+  select {
+    transition: all 0.3s ease;
+    border: 2px solid #000;
+    padding: 1em;
+    background: #fff;
+    font-size: 1em;
+    box-shadow: inset 0.25em 0.25em rgba(0, 0, 0, 0.1);
+    min-width: 12em;
+  }
+
+
+  @media (max-width: 992px) {
+
+    input[type=text],
+    select {
+      transition: all 0.3s ease;
+      border: 2px solid #000;
+      padding: 1em;
+      background: #fff;
+      font-size: 1em;
+      box-shadow: inset 0.25em 0.25em rgba(0, 0, 0, 0.1);
+      min-width: 20em;
+    }
+
+    .follow{
+      margin-top: 20px;
+    }
+    
+  }
+
+
+  @media (max-width: 425px) {
+    input[type=text],
+    select {
+      display: flex;
+      transition: all 0.3s ease;
+      border: 2px solid #000;
+      padding: 1em;
+      background: #fff;
+      font-size: 1em;
+      box-shadow: inset 0.25em 0.25em rgba(0, 0, 0, 0.1);
+      min-width: 17em;
+      justify-content: center;
+    }
+
+    .follow{
+      margin-top: 20px;
+    }
+  }
+
+  @media (min-width: 600px) {
+    input[type=text],
+    select {
+      display: flex;
+      transition: all 0.3s ease;
+      border: 2px solid #000;
+      padding: 1em;
+      background: #fff;
+      font-size: 1em;
+      box-shadow: inset 0.25em 0.25em rgba(0, 0, 0, 0.1);
+      min-width: 14em;
+      justify-content: center;
+    }
+    
+    .follow{
+      margin-top: 20px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    input[type=text],
+    select {
+      display: flex;
+      transition: all 0.3s ease;
+      border: 2px solid #000;
+      padding: 1em;
+      background: #fff;
+      font-size: 1em;
+      box-shadow: inset 0.25em 0.25em rgba(0, 0, 0, 0.1);
+      min-width: 12em;
+      justify-content: center;
+    }
+
+    .search-bar{
+        display: flex;
+        justify-content: center;
+    }
+
+    .follow{
+      margin-top: 0px;
+    }
+
+  }
+
+
+  input[type=text]:active, input[type=text]:focus,
+  select:active,
+  select:focus {
+    transform: translate(-0.1em, -0.1em);
+    box-shadow: 0.25em 0.25em;
+    outline: none;
+  }
+  
+  /* <select> styles */
+  select {
+    /* Reset */
+    appearance: none;
+    outline: 0;
+    border: 2px solid #000;
+    font: inherit;
+    box-shadow: none;
+    width: 1em;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/1/1e/Font_Awesome_5_solid_arrow-down.svg) no-repeat right 0.9em center/1em, linear-gradient(to left, #ccc 3em, white 3em);
+    padding-right: 3em;
+    color: #000;
+    cursor: pointer;
+    /* <option> colors */
+    /* Remove IE arrow */
+  }
+  select option {
+    color: inherit;
+    background-color: white;
+    border: 1px solid #000;
+    border-top: 0;
+  }
+  select::-ms-expand {
+    display: none;
+  }
+  
+  input[type=checkbox],
+  input[type=radio] {
+    position: relative !important;
+    appearance: none;
+    margin: 8px;
+    box-sizing: content-box;
+    overflow: hidden;
+  }
+  input[type=checkbox]:focus,
+  input[type=radio]:focus {
+    transform: translate(-2px, -2px);
+    box-shadow: 2px 2px 0 0 #000;
+  }
+  input[type=checkbox]:before,
+  input[type=radio]:before {
+    content: "";
+    display: block;
+    box-sizing: content-box;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #000;
+    transition: 0.2s border-color ease;
+  }
+  input[type=checkbox]:checked:before,
+  input[type=radio]:checked:before {
+    transition: 0.5s border-color ease;
+  }
+  input[type=checkbox]:disabled:before,
+  input[type=radio]:disabled:before {
+    border-color: #ccc;
+    background-color: #ccc;
+  }
+  input[type=checkbox]:after,
+  input[type=radio]:after {
+    content: "";
+    display: block;
+    position: absolute;
+    box-sizing: content-box;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 50%;
+    background-color: #0051ff;
+    width: 18px;
+    height: 18px;
+    border-radius: 100vh;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  input[type=checkbox][type=radio],
+  input[type=radio][type=radio] {
+    border-radius: 100%;
+  }
+  input[type=checkbox][type=radio]:before,
+  input[type=radio][type=radio]:before {
+    border-radius: 100vh;
+  }
+  input[type=checkbox][type=radio]:after,
+  input[type=radio][type=radio]:after {
+    width: 18px;
+    height: 18px;
+    border-radius: 100vh;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  input[type=checkbox][type=radio]:checked:after,
+  input[type=radio][type=radio]:checked:after {
+    animation: toggleOnRadio 0.2s ease forwards;
+  }
+  input[type=checkbox][type=checkbox]:before,
+  input[type=radio][type=checkbox]:before {
+    border-radius: 0;
+    transition: 0.2s border-color ease, 0.2s background-color ease;
+  }
+  input[type=checkbox][type=checkbox]:after,
+  input[type=radio][type=checkbox]:after {
+    width: 10.8px;
+    height: 18px;
+    border-radius: 0;
+    transform: translate(-50%, -85%) scale(0) rotate(45deg);
+    background-color: transparent;
+    box-shadow: 4px 4px 0px 0px #0051ff;
+  }
+  input[type=checkbox][type=checkbox]:checked:after,
+  input[type=radio][type=checkbox]:checked:after {
+    animation: toggleOnCheckbox 0.2s ease forwards;
+  }
+  input[type=checkbox][type=checkbox]:checked:not(:disabled):before,
+  input[type=radio][type=checkbox]:checked:not(:disabled):before {
+    background-color: #e91313;
+  }
+  input[type=checkbox][type=checkbox]:not(:disabled):after,
+  input[type=radio][type=checkbox]:not(:disabled):after {
+    box-shadow: 4px 4px 0px 0px white;
+  }
+  
+  @keyframes toggleOnCheckbox {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -85%) scale(0) rotate(45deg);
+    }
+    70% {
+      opacity: 1;
+      transform: translate(-50%, -85%) scale(0.9) rotate(45deg);
+    }
+    100% {
+      transform: translate(-50%, -85%) scale(0.8) rotate(45deg);
+    }
+  }
+  @keyframes toggleOnRadio {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0);
+    }
+    70% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(0.9);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+  }
