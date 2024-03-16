@@ -19,3 +19,6 @@
 [submodule "Quran"]
 	path = Quran
 	url = https://github.com/lzif/Quran
+[submodule "asmaul-husna"]
+	path = asmaul-husna
+	url = https://github.com/suryami62/asmaul-husna.git
