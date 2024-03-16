@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Scheherazade';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fatiha/fonts/indopak.ttf');
+}
+
+.arabic {
+    font-family : Scheherazade;
+    line-height: 2.0;
+}
+
+.pre-line {
+    white-space: pre-line;
+}
