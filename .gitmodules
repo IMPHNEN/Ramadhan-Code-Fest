@@ -25,3 +25,6 @@
 [submodule "IG-downloader"]
 	path = IG-downloader
 	url = git@github.com:yohanesokta/IG-downloader.git
+[submodule "SejenakMembaca"]
+	path = SejenakMembaca
+	url = https://github.com/KZdra/SejenakMembaca.git
