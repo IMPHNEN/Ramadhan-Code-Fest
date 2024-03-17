@@ -22,3 +22,6 @@
 [submodule "asmaul-husna"]
 	path = asmaul-husna
 	url = https://github.com/suryami62/asmaul-husna.git
+[submodule "IG-downloader"]
+	path = IG-downloader
+	url = git@github.com:yohanesokta/IG-downloader.git
