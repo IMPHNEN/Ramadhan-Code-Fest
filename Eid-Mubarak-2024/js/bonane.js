@@ -33,7 +33,7 @@ let gasyYear = new Date().getFullYear();
  *
  * @type {number}
  */
-document.querySelector('#year').innerText = gasyYear;
+document.querySelector('#year');
 document.title += ` | ${gasyYear}`;
 
 /**
@@ -44,7 +44,7 @@ document.title += ` | ${gasyYear}`;
  * @returns {string}
  */
 function formatMessage(message) {
-    return message ? message.replace('{{YEAR}}', gasyYear) : `Ilham apriansyah ${gasyYear} !`;
+    return message ? message.replace('{{YEAR}}', gasyYear) : `Ilham Apriansyah ${gasyYear} !`;
 }
 
 /**
@@ -104,20 +104,15 @@ function getFlag(nous) {
 // Fetch json file
 $.getJSON('USER.json', function (elements) {
     elements.forEach(function (nous, i) {
-        document.getElementById('carousel-indicators').innerHTML += `
-              <li data-target="#quote-carousel" data-slide-to="${i}" class="${isActive(i)}" title="${checkName(nous.name)}">
-                <img src="${checkImage(nous.image)}" alt="">
-              </li>`
-
         document.getElementById('name').innerHTML += `
             <div class="item ${isActive(i)}">
                <blockquote>
                   <div class="row">
-                       <div class="col-sm-3 text-center">
-                           <img class="img-circle" src="${checkImage(nous.image)}" style="width: 100px;height:100px;">
+                       <div class="col-sm-5 text-center">
+                           <img class="img-circle" src="${checkImage(nous.image)}" >
                        </div>
                         <div class="col-sm-9">
-                            <p>${formatMessage(nous.message)}</p>
+                            ${formatMessage(nous.message)}
                             <div class="row">
                                 <small>
                                     ${checkName(nous.name)}

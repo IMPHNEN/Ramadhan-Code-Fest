@@ -1,13 +1,14 @@
 /* basic styles for black background and crosshair cursor */
 
 body {
-    background: #000 !important;
+    background-image: url('../images/Eid.jpg');
     margin: 0;
     overflow: hidden !important;
+    z-index: auto;
 }
 
 canvas {
-    cursor: crosshair;
+    cursor: progress;
     display: block;
 }
 
@@ -69,11 +70,6 @@ Carroussel css
 
 #quote-carousel .carousel-indicators .active {
     background: #333333;
-}
-
-#quote-carousel img {
-    /*width: 250px;*/
-    /*height: 100px*/
 }
 
 /* End carousel */
