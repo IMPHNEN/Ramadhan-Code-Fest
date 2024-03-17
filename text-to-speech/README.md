@@ -2,4 +2,4 @@ Ini adalah program text to speech menggunakan JavaScript. Kamu bisa mencoba meng
 
 Demo : https://galihap76.github.io/text-to-speech-js.github.io/
 
-Terakhir, tentu saja kamu boleh memodifikasi source code. Enjoy!
+Terakhir, tentu saja kamu boleh memodifikasi source code nya. Enjoy!
