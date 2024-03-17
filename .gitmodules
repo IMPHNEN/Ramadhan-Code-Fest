@@ -28,3 +28,6 @@
 [submodule "SejenakMembaca"]
 	path = SejenakMembaca
 	url = https://github.com/KZdra/SejenakMembaca.git
+[submodule "quran-app"]
+	path = quran-app
+	url = https://github.com/aacmal/quran-app-nextjs.git
