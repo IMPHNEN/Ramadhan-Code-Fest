@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sofia&display=swap"
+      rel="stylesheet"
+    />
+    <title>Hitung Mundur Hari Raya Idul Fitri</title>
+    <style>
+      body {
+        margin: 0; /* menghapus margin default */
+        padding: 0; /* menghapus padding default */
+        font-family: "Sofia", cursive;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+        background: url("img/ramadan_card_vector.jpg") no-repeat center center
+          fixed; /* agar gambar tetap saat di-scroll */
+        background-size: cover; /* mengatur agar gambar selalu mencakup seluruh halaman */
+      }
+
+      #countdown {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 20px;
+        color: white; /* menambahkan warna teks putih */
+      }
+
+      .container {
+        margin-top: 25%;
+      }
+
+      .text-white {
+        color: white;
+      }
+
+      .quotes {
+        color: white;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        opacity: 0; /* Awalnya atur opacity menjadi 0 */
+        transition: opacity 1s ease-in-out; /* Animasi perubahan opacity selama 1 detik */
+      }
+      .quotes.loaded {
+        opacity: 1; /* Setelah dimuat, atur opacity menjadi 1 */
+      }
+
+      @media only screen and (max-width: 768px) {
+        body {
+          background-image: url("img/bg-mobile.png");
+        }
+        h1 .text-white {
+          color: white;
+          font-size: 8px;
+        }
+        #countdown {
+          font-size: 20px;
+          font-weight: bold;
+          margin-top: 20px;
+        }
+        .container {
+          margin-top: 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-white">Hitung Mundur Hari Raya Idul Fitri</h1>
+      <div id="countdown"></div>
+      <h5
+        class="quotes"
+        style="
+          color: white;
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        "
+      >
+        "Saya Ramadhany sekeluarga mengucapkan mohon maaf lahir dan batin"
+      </h5>
+      <h6
+        class="footer"
+        style="
+          color: white;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+            Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+            sans-serif;
+        "
+      >
+        Created By Dhanyrpebs
+      </h6>
+    </div>
+    <script>
+      // Tanggal target untuk Idul Fitri (dalam format tahun, bulan (0-indexed), tanggal)
+      const targetDate = new Date("2024-04-10");
+
+      function hitungMundur() {
+        const now = new Date().getTime();
+        const difference = targetDate - now;
+
+        // Konversi difference dari milidetik menjadi hari, jam, menit, dan detik
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor(
+          (difference % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        // Menampilkan hasil hitungan mundur di elemen dengan id "countdown"
+        document.getElementById("countdown").innerHTML = `
+    ${days} hari ${hours} jam ${minutes} menit ${seconds} detik
+  `;
+
+        // Hitung mundur setiap 1 detik
+        setTimeout(hitungMundur, 1000);
+      }
+
+      // Mulai hitung mundur saat halaman dimuat
+      hitungMundur();
+
+      window.addEventListener("load", function () {
+        const quotesElement = document.querySelector(".quotes");
+        quotesElement.classList.add("loaded"); // Menambah kelas 'loaded' setelah halaman dimuat
+      });
+    </script>
+  </body>
+</html>
