@@ -1,0 +1,68 @@
+@media (min-width: 768px) and (max-width: 1024px)  {
+  
+body{
+    background: #eee;
+  }
+
+div.desktop-container{
+  display: flex;
+  flex: center;
+  justify-content: center;
+  margin-top: 20%;
+}
+
+div.desktop-wrapper {
+  max-width: 768px;
+  height: fit-content;
+  background: #222;
+  border:2px solid #000;
+  padding: 20px;
+  border-radius: 10px !important;
+}
+
+div.rumusContainer {
+  border-radius: 10px !important;
+  height: 256px !important;
+}
+div.rumus {
+  font-size: 100px !important;
+  overflow-y: hidden;
+  height: 150px !important;
+}
+div.hasil {
+  font-size: 60px !important;
+  overflow-y: hidden;
+  min-height: 100px;
+  height: auto !important;
+}
+div.btnContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+div.btnTop {
+  font-size: 35px;
+  color: #fff !important;
+  font-size: 60px !important;
+  margin: 10px 0 15px 0;
+}
+div.btn {
+  line-height: 128px !important;
+  width: 180px !important;
+  height: 128px !important;
+  font-size: 70px !important;
+  padding: 2px !important;
+}
+
+div.desktop-button {
+  text-align: center;
+}
+
+
+p.footer {
+   transform: translateY(-2.4em)!important;
+   color: #fff;
+ }
+  
+}
