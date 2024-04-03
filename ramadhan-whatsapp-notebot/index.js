@@ -7,7 +7,10 @@ const client = new Client({
     restartOnAuthFail: true,
     puppeteer: {
         headless: true,
-        args: [ '--no-sandbox', '--disable-setuid-sandbox' ]
+        args: [
+		'--no-sandbox',
+		'--disable-setuid-sandbox'
+	]
     },
     authStrategy: new LocalAuth({
         clientId: "client"
