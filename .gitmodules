@@ -31,3 +31,6 @@
 [submodule "quran-app"]
 	path = quran-app
 	url = https://github.com/aacmal/quran-app-nextjs.git
+[submodule "ghosint"]
+	path = ghosint
+	url = https://github.com/hiiruki/ghosint.git
