@@ -34,3 +34,6 @@
 [submodule "ghosint"]
 	path = ghosint
 	url = https://github.com/hiiruki/ghosint.git
+[submodule "countdown-fasting"]
+	path = countdown-fasting
+	url = https://github.com/alfiannajih/countdown-fasting
