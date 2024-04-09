@@ -1,6 +1,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="module" src="./script.js"></script>
+  <script type="module" src="https://md-block.verou.me/md-block.js"></script>
   <script type="module" src="./keyboard.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
  <link rel="stylesheet" href="./style.css">
@@ -55,12 +56,39 @@
     <div id="jumlahEl" class="btn jumlah">=</div>
     </div>
     
+<div class="openModal">
+hitung rumus dengan AI <span class="tag">Baru</span>
+</div>
+
+  <p class="footer">mininxd</p>
  </div>
  
   </div>
   
 </div>
 </div>
+
   
-  <p class="footer">mininxd</p>
+  
+  <div class="modal">
+    <div class="modalClose"></div>
+  <div class="modalWrapper">
+<span id="resultEl"></span>
+    <div class="loaderWrapper">
+<div id="loader" class="loader"></div>
+<p>AI sedang berpikir... <span id="timer">0.0s</span></p>
+    </div>
+    
+  <div style="text-align:center; padding-bottom:1;0px; position:relative; top:10%">
+    <md-block id="donate" style="display:none; justify-content:center">
+    [![source - github](https://img.shields.io/badge/source-github-2a2a2a?style=for-the-badge&logo=github)](https://github.com/MininxD/kalkulator-web)
+    [![donate - saweria](https://img.shields.io/badge/donate-saweria-orange?style=for-the-badge)](https://saweria.co/mininxd)
+  </md-block>
+  <span class="info">// Tekan sisi gelap untuk tutup pop-up</span>
+  </div>
+  
+  
+  </div>
+  </div>
+  
 </body>

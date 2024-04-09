@@ -1,4 +1,4 @@
-
+import "./ai.js";
 var rumus = document.getElementById("rumusEl");
 var hasil = document.getElementById("hasilEl");
 
