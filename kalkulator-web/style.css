@@ -1,6 +1,6 @@
-@import url("./css/desktop.css");
-@import url("./css/desktop-chrome-mobile.css");
-
+@import url("./desktop.css");
+@import url("./modal.css");
+@import url("./loader.css");
 
 body {
    position: relative;
@@ -17,7 +17,7 @@ body {
      font-size: 55px;
    }
    div.rumus {
-     transition: 0.3s ease-out;
+     transition: 0.05s linear;
      overflow-x: scroll;
      overflow-y: none;
      outline: none;
@@ -28,7 +28,7 @@ body {
    div.hasil {
      overflow-x: scroll;
      overflow-y: none;
-     transition: 0.3s ease-out;
+     transition: 0.05s linear;
      font-size: 32px;
      max-height: 42px;
      margin-top:5px;
@@ -63,7 +63,7 @@ body {
    }
    div.btn {
      user-select: none;
-     transition: 0.075s ease-out;
+     transition: 0.1s linear;
      padding: 10px;
      line-height: 60px;
      font-size: 40px;
@@ -90,5 +90,14 @@ body {
      text-align: center;
      font-style: oblique;
      opacity: 0.4;
-     transform: translateY(-2.5em);
+     padding-bottom: 1em;
+   }
+   .tag {
+     font-size: 10px;
+     background: #BAE3C6;
+     color: #000;
+     padding: 5px;
+     border-radius: 50px;
+     vertical-align: super;
+     
    }

@@ -31,3 +31,12 @@
 [submodule "quran-app"]
 	path = quran-app
 	url = https://github.com/aacmal/quran-app-nextjs.git
+[submodule "ghosint"]
+	path = ghosint
+	url = https://github.com/hiiruki/ghosint.git
+[submodule "countdown-fasting"]
+	path = countdown-fasting
+	url = https://github.com/alfiannajih/countdown-fasting
+[submodule "FaceCompareLibrary"]
+	path = FaceCompareLibrary
+	url = https://github.com/dikamahard/FaceCompareLibrary
